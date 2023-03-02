@@ -1,0 +1,25 @@
+<div class="card w-50 m-auto" style="cursor: pointer;"  *ngIf="data">
+  <div routerLink="products/{{data.id}}">
+    <img class="card-image m-5 " src="{{data.image}}" width="300px" height="300px" alt=""><br><br>
+      <div class="card-body ms-5">
+        <h3 class="card-title ">{{data.title}}</h3>
+        <h6 class="card-text">{{data.description}}</h6>
+        <h3>{{data.price + " LE"}}</h3>
+        <h3>{{data.category}}</h3>
+      </div>
+  </div>
+      <button class="w-25 ms-5 btn btn-primary col-sm-10" *ngIf="!addButton"  (click)="addButton=true" >AddToCart</button>
+      <br>
+      <br>
+      <div class="d-flex m-5 container" *ngIf="addButton">
+        <div class="row">
+          <input type="number" class="form-control w-50 me-3 " [(ngModel)]="amount" >
+          <button class="btn btn-danger"  (click)="add();addButton=false">Add</button>
+        </div>
+      </div>
+      <br><br>
+
+
+</div>
+
+

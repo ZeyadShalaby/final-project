@@ -1,0 +1,7 @@
+<div *ngFor="let item of products" class="container m-5">
+    <div *ngIf="item">
+    <app-product [data]="item" (item)="addToCart($event)"></app-product>
+    <br>
+  </div>
+</div>
+

@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row m-5" >
+    <div class="col-lg-6 col-md-8 col-sm-4">
+      <img width="500px" height="500px" src="{{product.image}}" alt="sas">
+    </div>
+    <div class="col-lg-6 col-md-4 col-sm-4">
+      <br>
+      <div class="info">
+        <div class="list-unstyled">
+          <li><strong>Title : </strong>{{product.title}}</li><br>
+          <li><strong>Description : </strong>{{product.description}}</li><br>
+          <li><strong>Category : </strong>{{product.category}}</li><br>
+          <li><strong>Rating : </strong>{{product.rating.rate}}</li><br>
+          <li><strong>Count : </strong>{{product.rating.count}}</li><br>
+          <li><strong>Price : </strong>{{product.price + " LE"}}</li><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
